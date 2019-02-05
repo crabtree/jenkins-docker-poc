@@ -1,4 +1,4 @@
-freeStyleJob("Seedjob") {
+freeStyleJob("seedjob") {
     label("master")
     scm {
         git {
