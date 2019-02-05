@@ -1,0 +1,7 @@
+build-pipeline-plugin
+build-timeout
+copyartifact
+git
+workflow-aggregator
+timestamper
+docker-plugin
