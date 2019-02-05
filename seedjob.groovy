@@ -9,6 +9,7 @@ pipelineJob("hello-world") {
     definition {
         cps {
             script(helloWorldScript)
+            sandbox(true)
         }
     }
 }
