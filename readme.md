@@ -30,12 +30,6 @@ $ docker run -d -p 8080:8080 -p 50000:50000 -v jenkins_master:/var/jenkins_home 
 
 ## Setting up jenkins slave(s)
 
-Fetch base slave image with jnlp support.
-
-```
-$ docker pull jenkins/jnlp-slave
-```
-
 Build `jenkins-slave-nodejs` image. In following example, you must specify Node.js major version as an build argument (`NODE_VERSION`).
 
 ```
