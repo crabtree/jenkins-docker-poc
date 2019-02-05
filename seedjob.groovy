@@ -1,10 +1,12 @@
 def helloWorldScript = '''
 node {
-   echo 'Hello World'
+  stage('hello') {
+    echo 'Hello World'
+  }
 }
 '''
 
-pipelineJob("hello-world") {
+pipelineJob("hello-world-inline") {
     description "Hello world job"
     definition {
         cps {
