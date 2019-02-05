@@ -5,3 +5,4 @@ git
 workflow-aggregator
 timestamper
 docker-plugin
+job-dsl
