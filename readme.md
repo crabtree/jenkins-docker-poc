@@ -28,14 +28,6 @@ Run master node. Mount `/var/jenkins_home` to a volume and share docker service 
 $ docker run -d -p 8080:8080 -p 50000:50000 -v jenkins_master:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkins-master
 ```
 
-Configure master node.
-
-1. Setup master without installing plugins
-
-2. Configure docker plugin [Manage Jenkins > System > Cloud]
-
-- Docker Host URI `unix:///var/run/docker.sock`
-
 ## Setting up jenkins slave(s)
 
 Fetch base slave image with jnlp support.
@@ -49,5 +41,3 @@ Build `jenkins-slave-nodejs` image. In following example, you must specify Node.
 ```
 $ docker build -f jenkins-slave-nodejs\Dockerfile --build-arg NODE_VERSION=8 -t jenkins-salve-nodejs:8 jenkins-slave-nodejs
 ```
-
-Configure docker slave using image `jenkins-slave-nodejs:8`, mark to pull image once.
