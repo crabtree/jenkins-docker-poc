@@ -1,4 +1,5 @@
 freeStyleJob("Seedjob") {
+    label("master")
     scm {
         git {
             branch '*/master'
