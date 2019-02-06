@@ -8,13 +8,13 @@ First, I would suggest forking this repository, as you likely modify the `seedjo
 
 ## Setup jenkins master
 
-Build a docker image from Dockerfile present in `jenkins-master` subdirectory. Provided `Dockerfile` sets up default plugins and several init groovy scripts.
+Build a docker image from `Dockerfile` present in `jenkins-master` subdirectory. Provided `Dockerfile` sets up default plugins and several groovy init scripts.
 
 ```
 $ docker build -f jenkins-master\Dockerfile -t jenkins-master jenkins-master
 ```
 
-Run master node. Mount `/var/jenkins_home` to a volume and share docker service from the host with the container.
+Run Jenkins master node. Mount `/var/jenkins_home` to a volume and share docker service from the host with the container.
 
 ```
 $ docker run -d -p 8080:8080 -p 50000:50000 -v jenkins_master:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock --name jenkins-master jenkins-master
