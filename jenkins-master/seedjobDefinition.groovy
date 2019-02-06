@@ -1,10 +1,12 @@
+def seedjobRepository = 'https://github.com/digital-tree/jenkins-docker-poc.git'
+
 freeStyleJob("seedjob") {
     label("master")
     scm {
         git {
             branch '*/master'
             remote {
-                url 'https://github.com/digital-tree/jenkins-docker-poc.git'
+                url seedjobRepository
             }
         }
     }
