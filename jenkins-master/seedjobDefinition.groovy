@@ -1,4 +1,4 @@
-def seedjobRepository = 'https://github.com/digital-tree/jenkins-docker-poc.git'
+def seedjobRepository = 'https://github.com/crabtree/jenkins-docker-poc.git'
 
 freeStyleJob("seedjob") {
     label("master")
